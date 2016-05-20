@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HintDesk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="lib/node_modules/es6-shim/es6-shim.js"></script>
+    <script src="lib/node_modules/systemjs/system-polyfills.src.js"></script>
+    <script src="lib/node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="lib/node_modules/angular2/angular2-polyfills.js"></script>
+    <script src="lib/node_modules/systemjs/system.src.js"></script>
+    <script src="lib/node_modules/rxjs/Rx.js"></script>
+    <script src="lib/node_modules/angular2/angular2.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.config({
+            packages: {
+                'app': { defaultExtension: 'js' },
+                'lib': { defaultExtension: 'js' }
+            }
+        });
+        System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<!-- 3. Display the application -->
+<body>
+    <hd-app>Loading...</hd-app>
+</body>
+</html>

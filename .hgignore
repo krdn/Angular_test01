@@ -1,0 +1,4 @@
+syntax: glob
+*.suo
+src/Angular2DotNet/node_modules/*
+src/Angular2DotNet/wwwroot/lib/*
