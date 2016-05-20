@@ -14,6 +14,7 @@ namespace Angular2DotNet
     {
         public Startup(IHostingEnvironment env)
         {
+
             // Set up configuration sources.
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
