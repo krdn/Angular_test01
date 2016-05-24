@@ -1,16 +1,18 @@
 {
     "compilerOptions": {
-        "experimentalDecorators": true,
-        "module": "commonjs",
         "noImplicitAny": false,
+        "module": "system",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "noEmitOnError": true,
-        "outDir": "./",
         "removeComments": false,
         "sourceMap": true,
         "target": "es5"
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "wwwroot"
     ],
     "compileOnSave": true
 }

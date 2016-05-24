@@ -10,6 +10,7 @@
     <script src="lib/node_modules/es6-shim/es6-shim.js"></script>
     <script src="lib/node_modules/systemjs/system-polyfills.src.js"></script>
     <script src="lib/node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
 
     <script src="lib/node_modules/angular2/angular2-polyfills.js"></script>
     <script src="lib/node_modules/systemjs/system.src.js"></script>
@@ -19,8 +20,10 @@
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
             packages: {
-                'app': { defaultExtension: 'js' },
+                'app': { defaultExtension: 'ts' },
                 'lib': { defaultExtension: 'js' }
             }
         });
@@ -31,6 +34,10 @@
 
 <!-- 3. Display the application -->
 <body>
-    <hd-app>Loading...</hd-app>
+    <my-app>Loading...</my-app>
+
+    <master-app>Loading...</master-app>
+    <tutorial-app>Loading...</tutorial-app>
+    <service-app>Loading...</service-app>
 </body>
 </html>
