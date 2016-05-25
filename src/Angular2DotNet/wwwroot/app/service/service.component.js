@@ -13,12 +13,13 @@ var ServiceComponent = (function () {
         this.heroService = heroService;
         this.title = 'Tour of Heroes';
     }
-    ServiceComponent.prototype.getHeroes = function () {
+    ServiceComponent.prototype._getHeroes = function () {
         var _this = this;
+        // HeroService에서 Promise.resolve(HEROES)로 처리하고 반환값을 then으로 받음
         this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
     };
     ServiceComponent.prototype.ngOnInit = function () {
-        this.getHeroes();
+        this._getHeroes();
     };
     ServiceComponent.prototype.onSelect = function (hero) { this.selectedHero = hero; };
     ServiceComponent = __decorate([

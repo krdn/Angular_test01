@@ -78,12 +78,13 @@ export class ServiceComponent implements OnInit {
 
     constructor(private heroService: HeroService) { }
 
-    getHeroes() {
+    _getHeroes() {
+        // HeroService에서 Promise.resolve(HEROES)로 처리하고 반환값을 then으로 받음
         this.heroService.getHeroes().then(heroes => this.heroes = heroes);
     }
 
     ngOnInit() {
-        this.getHeroes();
+        this._getHeroes();
     }
 
     onSelect(hero: Hero) { this.selectedHero = hero; }
